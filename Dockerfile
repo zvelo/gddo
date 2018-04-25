@@ -7,3 +7,4 @@ MAINTAINER Joshua Rubin <jrubin@zvelo.com>
 RUN apk add --no-cache ca-certificates
 ENTRYPOINT ["gddo-server"]
 COPY --from=build /go/bin/gddo-server /usr/local/bin/
+COPY --from=build /go/src/github.com/golang/gddo/gddo-server/assets /go/src/github.com/golang/gddo/gddo-server/assets
